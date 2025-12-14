@@ -31,14 +31,16 @@ export default function Dashboard() {
   ];
 
   useEffect(() => {
-    const liveRef = ref(db, "airwatch/live/esp32_001");
+    if (!db) return;
 
-    const unsub = onValue(liveRef, (snapshot) => {
-      setCoimbatore(snapshot.val());
+    const liveRef = ref(db, "airwatch/live/esp32_001");
+    const unsub = onValue(liveRef, (snap) => {
+      setCoimbatore(snap.val());
     });
 
     return () => unsub();
   }, []);
+
 
   return (
     <div className="p-10 space-y-12">
