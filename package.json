@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "tailwind:build": "tailwindcss -i ./src/input.css -o ./public/output.css"
   },
   "dependencies": {
     "chart.js": "^4.5.1",

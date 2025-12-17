@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    "./src/**/*.{js,jsx}"
   ],
   theme: {
     extend: {
@@ -11,12 +11,8 @@ module.exports = {
         bg: "#F3FAFD",
         card: "#FFFFFF",
         muted: "#8A9BB0",
-        badgeOrange: "#FFF2E5",
-        badgeOrangeText: "#D9480F",
-        badgeYellow: "#FFF8E1",
-        badgeYellowText: "#C47F00",
-      }
-    }
+      },
+    },
   },
   plugins: [],
-}
+};
