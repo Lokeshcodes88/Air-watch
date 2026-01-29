@@ -9,7 +9,7 @@ export default function SensorCard({ title, id, data }) {
   const temperature = Number(data.temperature ?? 0);
   const co2 = Number(data.co2 ?? 0);
 
-  const aqi = Math.round(pm25 * 2.5);
+  const aqi = calculatePM25AQI(pm25);
   const status = getAQIStatus(aqi);
 
   return (
