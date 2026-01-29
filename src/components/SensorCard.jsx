@@ -1,5 +1,6 @@
 import { Wind, Droplet, Thermometer, Factory } from "lucide-react";
-import { getAQIStatus } from "../utils/aqi";
+import { calculatePM25AQI, getAQIStatus } from "../utils/aqi";
+
 
 export default function SensorCard({ title, id, data }) {
   if (!data) return null;
