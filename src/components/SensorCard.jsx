@@ -44,7 +44,7 @@ export default function SensorCard({ title, id, data }) {
         <Metric icon={<Wind size={20} />} value={pm25} label="PM2.5" />
         <Metric icon={<Droplet size={20} />} value={`${humidity}%`} label="Humidity" />
         <Metric icon={<Thermometer size={20} />} value={`${temperature}°`} label="Temp" />
-        <Metric icon={<Factory size={20} />} value={`${co2} ppm`} label="CO₂" />
+        <Metric icon={<Factory size={20} />} value={`${co2} ppm`} label="CO" />
       </div>
     </div>
   );

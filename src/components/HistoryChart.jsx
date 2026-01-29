@@ -25,7 +25,7 @@ export default function HistoryChart() {
             borderWidth: 2
           },
           {
-            label: "CO₂ (ppm)",
+            label: "CO (ppm)",
             data: labels.map((t) => raw[t].co2),
             borderWidth: 2
           }
