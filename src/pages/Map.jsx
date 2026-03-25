@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 
 const locations = [
   {
-    title: "Coimbatore",
+    title: "Kumaraguru college of Technology",
     id: "ESP32_001",
-    lat: 11.0168,
-    lng: 76.9558,
+    lat: 11.0813,
+    lng: 76.9901,
     data: { pm25: null, humidity: null, temperature: null, co2: null },
   },
   {
