@@ -80,10 +80,10 @@ export default function Dashboard() {
 
       {/* LIVE SENSOR PANEL */}
       <section>
-        <h2 className="text-xl font-semibold mb-4">Live Sensor – Coimbatore</h2>
+        <h2 className="text-xl font-semibold mb-4">Live Sensor – KCT</h2>
         <div className="flex flex-wrap gap-8">
           <SensorCard
-            title="Coimbatore"
+            title="Kumaraguru college of Technology"
             id="ESP32_001"
             data={coimbatore}
             adjustAqi={-350}
