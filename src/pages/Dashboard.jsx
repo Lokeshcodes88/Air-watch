@@ -86,7 +86,7 @@ export default function Dashboard() {
             title="Kumaraguru college of Technology"
             id="ESP32_001"
             data={coimbatore}
-            adjustAqi={-350}
+            adjustAqi={-380}
           />
         </div>
       </section>
