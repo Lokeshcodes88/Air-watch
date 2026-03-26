@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import { db } from "../firebase/firebase";
+import { calculatePM25AQI } from "../utils/aqi";
 import {
   LineChart,
   Line,
@@ -15,7 +16,7 @@ import { format } from "date-fns";
 const METRICS = {
   aqi: { label: "AQI", color: "#1FA3D6" },
   pm25: { label: "PM2.5", color: "#60a5fa" },
-  co2: { label: "CO₂", color: "#f97316" },
+  co2: { label: "CO", color: "#f97316" },
   temperature: { label: "Temperature", color: "#ef4444" },
   humidity: { label: "Humidity", color: "#22c55e" },
 };
@@ -46,7 +47,7 @@ export default function AQIChart() {
           const pm25 = v.pm25 ?? 0;
           return {
             time: format(new Date(ts * 1000), "HH:mm"),
-            aqi: Math.round(pm25 * 2.5),
+            aqi: calculatePM25AQI(pm25) - 390,
             pm25,
             co2: v.co2 ?? 0,
             temperature: v.temperature ?? 0,
